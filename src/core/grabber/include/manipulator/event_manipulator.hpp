@@ -182,7 +182,24 @@ public:
         default:
           break;
         }
-      }
+      } else if (modifier_flag_manager_.pressed(krbn::modifier_flag::left_control)) {
+        switch (to_key_code) {
+        case krbn::key_code::h:
+          key_code = krbn::key_code::left_arrow;
+          break;
+        case krbn::key_code::j:
+          key_code = krbn::key_code::down_arrow;
+          break;
+        case krbn::key_code::k:
+          key_code = krbn::key_code::up_arrow;
+          break;
+        case krbn::key_code::l:
+          key_code = krbn::key_code::right_arrow;
+          break;
+       default:
+         break;
+       }
+     }
 
       // f1-f12
       {
